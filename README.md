@@ -1,6 +1,5 @@
-<img src='figures/dsuppvid.gif' align="right" width=360>
+<img src='figures/suppvid.gif' align="right" width=360>
 
-<br><br><br><br>
 
 # DeepStrain
 [Paper](https://www.biorxiv.org/content/10.1101/2021.01.05.425266v1)
