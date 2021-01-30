@@ -1,4 +1,4 @@
-<img src='figures/suppvid.gif' align="right" width=360>
+<img src='figures/landmarks.gif' align="right" width=360>
 
 <br><br><br><br>
 
