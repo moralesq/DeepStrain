@@ -8,5 +8,5 @@ class TestOptions(BaseOptions):
         parser.add_argument('--isTrain', type=bool, default=False, help='load for training')
         parser.add_argument('--pretrained_models_netS', type=str, default='./pretrained_models/carson_Jan2021.h5', help=' ')
         parser.add_argument('--pretrained_models_netME', type=str, default='./pretrained_models/carmenJan2021.h5', help=' ')
-  
+        parser.add_argument('--pipeline', type=str, default='segmentation_motion_strain', help=' ')  
         return parser

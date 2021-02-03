@@ -31,15 +31,18 @@ class NiftiDataset(BaseDataset):
         return x, nifti, nifti_resampled
     
 
-def save_as_nifti(y, nifti, nifti_resampled):
+def save_as_nifti(y, nifti, nifti_resampled, filename):
     
     if len(y.shape) == 4:
         y_nifti_resampled = nib.Nifti1Image(y, nifti_resampled.affine)
         y_nifti = resample_nifti(y_nifti_resampled, 
-                                in_plane_resolution_mm=nifti.header.get_zooms()[0],
-                                slice_thickness_mm=nifti.header.get_zooms()[2])
-
-        y_nifti = nib.Nifti1Image(np.argmax(y_nifti.get_fdata(),-1), y_nifti.affine)
+                                 in_plane_resolution_mm=nifti.header.get_zooms()[0],
+                                 slice_thickness_mm=nifti.header.get_zooms()[2])
+        
+        y_nifti = nib.Nifti1Image(np.array(np.argmax(y_nifti.get_fdata(),-1)), 
+                                  affine=nifti.affine,
+                                  header=nifti.header)
+        
     elif len(y.shape) == 5:
         
         Y = []
@@ -50,10 +53,10 @@ def save_as_nifti(y, nifti, nifti_resampled):
                                     slice_thickness_mm=nifti.header.get_zooms()[2])
             Y += [y_nifti.get_fdata()]
             
-        y_nifti = nib.Nifti1Image(np.argmax(np.stack(Y,-1),-1), y_nifti.affine)
-    
-    return y_nifti 
+        y_nifti = nib.Nifti1Image(np.argmax(np.stack(Y,-1),-1).astype(int), nifti.affine)
 
+    nib.Nifti1Image(np.array(y_nifti.get_fdata()), affine=y_nifti.affine).to_filename(filename+'.nii') 
+ 
 
 def resample_nifti(nifti, 
                    order=1,
