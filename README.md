@@ -37,11 +37,11 @@ bash ./scripts/install_pip.sh
 ```
 
 ### Use a Pre-trained Model
-- Download some test niftis:
+- Download some test data in nifti format:
 ```bash
 bash ./datasets/download_sample_dataset.sh
 ```
-- Download the pre-trained model (e.g., edges2shoes):
+- Download the pre-trained models (i.e., carson and carmen):
 ```bash
 bash ./pretrained_models/download_model.sh
 ```
