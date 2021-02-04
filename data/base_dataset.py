@@ -58,14 +58,14 @@ class Transforms():
 
     def __reshape_to_carmen__(self, x, inv=False):
         if inv:
-            x = x.transpose((1,2,3,0))
-            x = np.concatenate((np.zeros(x.shape[:-1]+(1,)), x),-1)
+            x = np.concatenate((np.zeros(x[:1].shape), x))
+            x = x.transpose((1,2,3,0,4)) 
         else:
             assert len(x.shape) == 4
             nx,ny,nz,nt=x.shape
             x=x.transpose(3,0,1,2)
             x=np.stack((np.repeat(x[:1],nt-1,axis=0), x[1:nt]), -1)
-            return x  
+        return x  
     
     def __zscore__(self, x):
 
@@ -108,35 +108,4 @@ class Transforms():
         for transform in self.transform_inv[::-1]:
             x = transform(x)
         return x    
-    
-
-class InverseTransforms():
-    
-    def __init__(self, opt):
-        self.opt = opt 
-        self.transform = self.get_transform(opt)
-       
-    @staticmethod
-    def __reshape_to_carson__(x, x_nifti_resampled):
-        if len(x.shape) == 3:
-            nx,ny,nz=x.shape
-            x=x.transpose(2,0,1)
-        elif len(x.shape) == 4:
-            nx,ny,nz,nt=x.shape
-            x=x.transpose(3,2,0,1)
-            x=x.reshape((nt*nz,nx,ny))
-        return x
-       
-    def get_transform(self, opt):
-
-        transform_list = []
-
-        if 'reshape_to_carson' in opt.preprocess:
-            transform_list.append(self.__reshape_to_carson__)
-        elif 'reshape_to_carmen' in opt.preprocess:
-            transform_list.append(self.__reshape_to_carmen__)
-     
-
-            
-            
-            
+  

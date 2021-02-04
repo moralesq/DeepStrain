@@ -1,5 +1,6 @@
 import os
 import glob
+import warnings
 import numpy as np
 import nibabel as nib
 
@@ -64,12 +65,13 @@ def resample_nifti(nifti,
                    in_plane_resolution_mm=1.25,
                    slice_thickness_mm=None,
                    number_of_slices=None):
-
+    
+    # sometimes dicom to nifti programs don't define affine correctly.
     resolution = np.array(nifti.header.get_zooms()[:3] + (1,))
-    if not (np.abs(np.diag(nifti.affine))== resolution).all():
-        # Affine is not properly set, fix. 
+    if (np.abs(nifti.affine)==np.identity(4)).all():
         nifti.set_sform(nifti.affine*resolution)
-        
+        warnings.warn("Affine in nifti might be set incorrectly. Setting to affine=affine*zooms")
+
     data   = nifti.get_fdata().copy()
     shape  = nifti.shape[:3]
     affine = nifti.affine.copy()

@@ -10,13 +10,15 @@ class BaseOptions():
     def initialize(self, parser):
         """This class defines options used during both training and test time.
         """
-        parser.add_argument('--dataroot', required=True, help='path to images')
-        parser.add_argument('--dataformat', required=True, help='path to images')
+        parser.add_argument('--dataroot', type=str, default='./datasets/sample_nifti_4D', help='path to data')
+        parser.add_argument('--dataformat', type=str,  default='NIFTI', help='data format (e.g., NIFTI, DICOM)')
         parser.add_argument('--max_dataset_size', type=float, default=float("inf"), help=' ')
         parser.add_argument('--gpu_ids', type=str, default='0', help='gpu ids: e.g. 0  0,1,2, 0,2, -1 for CPU mode')
        
         # data parameters
-        parser.add_argument('--preprocess', type=str, default='reshape_to_carson_crop_zscore', help=' ')
+        parser.add_argument('--preprocess_carson', type=str, default='reshape_to_carson', help=' ')
+        parser.add_argument('--preprocess_carmen', type=str, default='reshape_to_carmen', help=' ')
+        parser.add_argument('--preprocess', type=str, default='crop_zscore', help=' ')
         parser.add_argument('--image_shape', type=tuple, default=(128,128,1), help=' ')
         parser.add_argument('--volume_shape', type=tuple, default=(128,128,16,1), help=' ')
         parser.add_argument('--nlabels', type=int, default=4, help='number of tissue classes')

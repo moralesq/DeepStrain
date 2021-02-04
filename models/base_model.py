@@ -11,7 +11,7 @@ class BaseModel(ABC):
         pass
    
     @abstractmethod    
-    def get_netD(self):
+    def get_netME(self):
         """Generate and save motion estimates."""
         pass    
         

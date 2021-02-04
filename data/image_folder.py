@@ -1,9 +1,9 @@
 import os
 
-
 EXTENSIONS = {}
 EXTENSIONS['NIFTI'] = ['.nii.gz', '.nii']
 EXTENSIONS['DICOM'] = ['.dcm']
+EXTENSIONS['H5PY']  = ['.h5']
 
 def is_data_file(filename, dformat="NIFTI"):
     return any(filename.endswith(extension) for extension in EXTENSIONS[dformat])
