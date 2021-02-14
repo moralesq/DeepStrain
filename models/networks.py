@@ -1,3 +1,7 @@
+# Manuel A. Morales (moralesq@mit.edu)
+# Harvard-MIT Department of Health Sciences & Technology  
+# Athinoula A. Martinos Center for Biomedical Imaging
+
 from tensorflow import keras 
 from tensorflow.keras.layers import PReLU, BatchNormalization, UpSampling2D, UpSampling3D, Conv2D, Conv3D, Add, Concatenate
 from .dense_image_warp import dense_image_warp3d as warp

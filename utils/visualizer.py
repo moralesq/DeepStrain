@@ -1,3 +1,7 @@
+# Manuel A. Morales (moralesq@mit.edu)
+# Harvard-MIT Department of Health Sciences & Technology  
+# Athinoula A. Martinos Center for Biomedical Imaging
+
 import numpy as np
 from skimage import measure
 import matplotlib.pylab as plt
@@ -38,5 +42,11 @@ def Plot(image, mask=None, figsize=(7,7), crop=False):
     fig, ax = plt.subplots(1,1, figsize=figsize)
     ax.imshow(image, cmap='gray')
     if mask is not None:
-        PlotContours(ax, mask, alpha=1, linewidth=1.3)  
-    plt.show()
+        try:
+            PlotContours(ax, mask, alpha=1, linewidth=1.3)  
+        except:
+            print('No contours found!')
+            
+
+            
+            

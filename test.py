@@ -2,10 +2,12 @@ import os
 import h5py
 import timeit
 import numpy as np
+import nibabel as nib
 from tensorflow.keras.optimizers import Adam
 from options.test_options import TestOptions
 from models import deep_strain_model
 from data import nifti_dataset, h5py_dataset
+from utils import myocardial_strain
 
 # options
 opt = TestOptions().parse()
@@ -29,14 +31,6 @@ if 'segmentation' in opt.pipeline:
         nifti_dataset.save_as_nifti(y, nifti, nifti_resampled,
                                     filename=os.path.join(opt.results_dir, filename+'_segmentation'))
         
-        if len(nifti.shape)==4:
-            # Save masks for strain analysis
-            HF = h5py.File(os.path.join(opt.results_dir, filename+'_segmentation.h5'), 'w')
-            for time_frame in range(y.shape[-2]):
-                hf = HF.create_group('frame_%d' %(time_frame))
-                hf.create_dataset('M', data=y[:,:,:,time_frame])
-            HF.close()
-
     del netS
 
 if 'motion' in opt.pipeline:
@@ -64,11 +58,50 @@ if 'motion' in opt.pipeline:
 
     del netME   
     
-# Development
-##if 'strain' in opt.pipeline:   
-##    opt.dataroot = opt.results_dir
-##    dataset = h5py_dataset.H5PYDataset(opt)
-##    
-##    for i, x in enumerate(dataset):
-##        
-##        print(x.shape)
+if 'strain' in opt.pipeline:   
+    dataset = h5py_dataset.H5PYDataset(opt)
+  
+    
+    for idx, u in enumerate(dataset): 
+        
+        filename  = dataset.filenames[idx].split('_motion.h5')[0]
+        mask_path = filename+'_segmentation.nii'
+        try:
+            mask_nifti = nib.load(mask_path)
+
+        except:
+            print('Missing segmentation')
+            continue
+
+        mask_zooms = mask_nifti.header.get_zooms()
+        mask_nifti = nifti_dataset.resample_nifti(mask_nifti, in_plane_resolution_mm=1.25, number_of_slices=16)
+        mask = mask_nifti.get_fdata()
+
+        Radial = np.zeros(mask.shape)
+        Circumferential = np.zeros(mask.shape)
+        for time_frame in range(u.shape[-1]):
+            strain = myocardial_strain.MyocardialStrain(mask=mask[:,:,:,0], flow=u[:,:,:,:,time_frame])
+            strain.calculate_strain(lv_label=3)
+
+            strain.Err[strain.mask_rot!=2] = 0.0
+            strain.Ecc[strain.mask_rot!=2] = 0.0
+
+            Radial[:,:,:,time_frame]          += strain.Err
+            Circumferential[:,:,:,time_frame] += strain.Ecc
+
+            GRS = strain.Err[strain.mask_rot==2].mean()
+            GCS = strain.Ecc[strain.mask_rot==2].mean()
+            print(GRS, GCS)
+
+
+        Radial = nib.Nifti1Image(Radial, mask_nifti.affine)
+        Circumferential = nib.Nifti1Image(Circumferential, mask_nifti.affine)
+
+        Radial.to_filename(filename+'_radial_strain.nii')
+        Circumferential.to_filename(filename+'_circumferential_strain.nii')
+
+
+
+
+
+

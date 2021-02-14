@@ -1,3 +1,7 @@
+# Manuel A. Morales (moralesq@mit.edu)
+# Harvard-MIT Department of Health Sciences & Technology  
+# Athinoula A. Martinos Center for Biomedical Imaging
+
 """Image warping using per-pixel flow vectors."""
 from __future__ import absolute_import
 from __future__ import division

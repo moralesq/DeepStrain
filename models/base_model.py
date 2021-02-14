@@ -1,3 +1,7 @@
+# Manuel A. Morales (moralesq@mit.edu)
+# Harvard-MIT Department of Health Sciences & Technology  
+# Athinoula A. Martinos Center for Biomedical Imaging
+
 from abc import ABC, abstractmethod
 
 class BaseModel(ABC):

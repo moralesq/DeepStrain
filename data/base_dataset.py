@@ -1,6 +1,11 @@
+# Manuel A. Morales (moralesq@mit.edu)
+# Harvard-MIT Department of Health Sciences & Technology  
+# Athinoula A. Martinos Center for Biomedical Imaging
+
 import numpy as np
 from abc import ABC, abstractmethod
 from tensorflow.keras.utils import Sequence
+from scipy.ndimage.measurements import center_of_mass
 
 class BaseDataset(Sequence, ABC):
     """This class is an abstract base class (ABC) for datasets."""
@@ -108,4 +113,22 @@ class Transforms():
         for transform in self.transform_inv[::-1]:
             x = transform(x)
         return x    
-  
+    
+
+def _centercrop(x):
+    nx, ny = x.shape[:2]
+    return x[nx//2-64:nx//2+64,ny//2-64:ny//2+64]
+
+def _roll(x,rx,ry):
+    x = np.roll(x,rx,axis=0)
+    x = np.roll(x,ry,axis=1)
+    return x
+
+def _roll2center(x, center):
+    return _roll(x, int(x.shape[0]//2-center[0]), int(x.shape[1]//2-center[1]))
+    
+def _roll2center_crop(x, center):
+    x = _roll2center(x, center)
+    return _centercrop(x)
+    
+    
