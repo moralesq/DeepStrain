@@ -45,20 +45,38 @@ bash ./datasets/download_sample_dataset.sh
 ```bash
 bash ./pretrained_models/download_model.sh
 ```
-
-- Generate results with the model for 3D niftis (segmentations only for single time frame!):
+- Generate segmentations with the model for 3D niftis:
 ```bash
-bash ./scripts/test_sample_nifti_3D.sh
+bash ./scripts/test_segmentation.sh ./datasets/sample_nifti_3D NIFTI ./results/sample_nifti_3D
 ```
-The test results will be saved to a html file here: `./results/sample_nifti_3D/`.
+The test results will be saved to a nifti file here: `./results/sample_nifti_3D/`.
 
-- Generate results with the model for 4D niftis (full pipeline):
+- Generate segmentations with the model for 4D (3D+time) niftis:
 ```bash
-bash ./scripts/test_sample_nifti_4D.sh
+bash ./scripts/test_segmentation.sh ./datasets/sample_nifti_4D NIFTI ./results/sample_nifti_3D
 ```
-Results can be found at `./results/sample_nifti_4D/`.
+The test results will be saved to a nifti file here: `./results/sample_nifti_4D/`.
+
+- Generate motion estimates with the model for 4D (3D+time) niftis. Note that for motion estimation only 4D is supported:
+```bash
+bash ./scripts/test_motion.sh ./datasets/sample_nifti_4D NIFTI ./results/sample_nifti_4D
+```
+The test results will be saved to a h5 file here: `./results/sample_nifti_4D/`.
+
+- Generate both segmentation and motion estimates with the model for 4D (3D+time) niftis:
+```bash
+bash ./scripts/test_segmentation_motion.sh ./datasets/sample_nifti_4D NIFTI ./results/sample_nifti_4D
+```
+The test results will be saved to nifti and h5 files here: `./results/sample_nifti_4D/`.
+
+- After the segmentations and motion estimates have been generated, we can use both calculate myocardial strain. Note that we're passing the output folder from the previous runs:
+```bash
+bash ./scripts/test_strain.sh ./results/sample_nifti_4D
+```
+The test results (4D radial and circumferential strain) will be saved to nifti files here: `./results/sample_nifti_4D/`.
 
 We are actively working on: 
 
 - support for dicom inputs 
 - support for regional analyses 
+- optimizing implementation
