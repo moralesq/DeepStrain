@@ -69,7 +69,7 @@ bash ./scripts/test_segmentation_motion.sh ./datasets/sample_nifti_4D NIFTI ./re
 ```
 The test results will be saved to nifti and h5 files here: `./results/sample_nifti_4D/`.
 
-- After the segmentations and motion estimates have been generated, we can use both calculate myocardial strain. Note that we're passing the output folder from the previous runs:
+- After the segmentations and motion estimates have been generated, we can use both to calculate myocardial strain. Note that we're passing the output folder from the previous runs:
 ```bash
 bash ./scripts/test_strain.sh ./results/sample_nifti_4D
 ```
