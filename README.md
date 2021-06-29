@@ -28,7 +28,7 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
 git clone -b master --single-branch https://github.com/moralesq/DeepStrain.git
 cd DeepStrain
 ```
-- Install PyTorch and dependencies from https://www.tensorflow.org/
+- Install TensorFlow and dependencies from https://www.tensorflow.org/install
 - Install python libraries   
 
 For pip users:
