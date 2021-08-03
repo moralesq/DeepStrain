@@ -71,7 +71,7 @@ class MyocardialStrain():
         F = F.dot(F.transpose(), F) 
         F.identity_subtract()
         
-        self.Err, self.Ecc = convert_to_polar(mask=self.mask_rot, E=0.5*F.asmat()[:,:,:,:2,:2])
+        self.Err, self.Ecc, self.Erc, self.Ecr = convert_to_polar(mask=self.mask_rot, E=0.5*F.asmat()[:,:,:,:2,:2])
         
 
 def roll(x, rx, ry):
@@ -98,7 +98,9 @@ def convert_to_polar(mask, E):
         sin = np.sin(np.deg2rad(phi))
 
         Exx, Exy, Eyx, Eyy = E[:,:,k,0,0],E[:,:,k,0,1],E[:,:,k,1,0],E[:,:,k,1,1]
-        Err[:,:,k] +=  cos*( cos*Exx+sin*Exy) +sin*( cos*Eyx+sin*Eyy)
-        Ecc[:,:,k] += -sin*(-sin*Exx+cos*Exy) +cos*(-sin*Eyx+cos*Eyy)
+        Err[:,:,k] +=  cos*( cos*Exx+sin*Exy) + sin*( cos*Eyx+sin*Eyy)
+        Ecc[:,:,k] += -sin*(-sin*Exx+cos*Exy) + cos*(-sin*Eyx+cos*Eyy)
+        Erc[:,:,k] +=  cos*(-sin*Exx+cos*Exy) + sin*(-sin*Eyx+cos*Eyy)
+        Ecr[:,:,k] += -sin*( cos*Exx+sin*Exy) + cos*( cos*Eyx+sin*Eyy)
 
-    return Err, Ecc
+    return Err, Ecc, Erc, Ecr
