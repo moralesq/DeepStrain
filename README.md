@@ -3,7 +3,7 @@
 <br><br><br><br>
 
 # DeepStrain
-[Paper](https://www.biorxiv.org/content/10.1101/2021.01.05.425266v1)
+[Paper](https://www.frontiersin.org/articles/10.3389/fcvm.2021.730316/full)
 
 
 Tensorflow implementation for cardiac segmentation, motion estimation, and strain analysis from cinematic magnetic resonance imaging (cine-MRI) data. For example,  given a 4D (3D+time) nifti dataset, our model is able to segmentations, motion estimates, and global measures of myocardial strain.
