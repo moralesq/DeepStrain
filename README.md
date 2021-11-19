@@ -18,7 +18,7 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
 
 # Table of Contents 
     
-    [here](#Getting Started)
+- [Getting Started](#Getting Started)
 
 ### Getting Started 
 
