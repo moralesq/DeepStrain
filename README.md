@@ -64,9 +64,15 @@ bash ./pretrained_models/download_model.sh
 
 ## Tutorial Jupyter Notebooks
 
+Our goal is to provide various Jupyter notebooks to illustrate the various way our method can be used. Although we already provide automated scripts, these notebooks will be use useful to provide some flexibility and potentially lead to applications in other domains. 
+
 ### Replication of Paper Results
 
+The first set of notebooks will focus replicating some of the results reported on our paper. This will be particularly useful if others would like to propose an alternative method and would like to use DeepStrain for comparison. In addition, this serves as a first quality check step before using DeepStrain in more clinically-oriented research applications. 
+
 #### Global Strain 
+
+We start by first reproducing the global strain results for the public [ACDC](https://github.com/moralesq/DeepStrain/blob/main/notebooks/2_replicate_paper_results_ACDC_global_strain_from_scratch.ipynb) and [CMAC](https://www.cardiacatlas.org/challenges/motion-tracking-challenge/) datasets. 
 
 
 ### Training 
