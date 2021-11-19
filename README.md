@@ -19,11 +19,11 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
 # Table of Contents 
     
 - [Getting Started](#Getting-Started)
-- [Pretrained Models](#Pretrained-Models)
+- [Pre-trained Models](#Pre-trained-Models)
 - [Tutorial Jupyter Notebooks](#Tutorial-Jupyter-Notebooks)
   * [Replication of Paper Results](#Replication-of-Paper-Results)
     + [Global Strain](#Global-Strain)
-      - [ACDC](https://github.com/moralesq/DeepStrain/notebooks/main/notebooks/2_replicate_paper_results_ACDC_global_strain_from_scratch.ipynb)
+      - [ACDC](https://github.com/moralesq/DeepStrain/blob/main/notebooks/2_replicate_paper_results_ACDC_global_strain_from_scratch.ipynb)
   * [Training](#Training)
 - [Automated Scripts](#Automated-Scripts)
   * [Segmentation](#Automated-Scripts)
