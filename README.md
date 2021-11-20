@@ -24,6 +24,7 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
   * [Replication of Paper Results](#Replication-of-Paper-Results)
     + [Global Strain](#Global-Strain)
       - [ACDC](https://github.com/moralesq/DeepStrain/blob/main/notebooks/2_replicate_paper_results_ACDC_global_strain_from_scratch.ipynb)
+      - [CMAC](https://github.com/moralesq/DeepStrain/blob/main/notebooks/3_replicate_paper_results_CMAC_global_strain_from_scratch.ipynb)
   * [Training](#Training)
 - [Automated Scripts](#Automated-Scripts)
   * [Segmentation](#Automated-Scripts)
@@ -64,11 +65,11 @@ bash ./pretrained_models/download_model.sh
 
 ## Tutorial Jupyter Notebooks
 
-Our goal is to provide various Jupyter notebooks to illustrate the various way our method can be used. Although we already provide automated scripts, these notebooks will be use useful to provide some flexibility and potentially lead to applications in other domains. 
+Our goal is to provide various Jupyter notebooks to illustrate the various ways our method can be used. Although we already provide automated scripts, these notebooks will be use useful to provide some flexibility and potentially lead to applications in other domains. 
 
 ### Replication of Paper Results
 
-The first set of notebooks will focus replicating some of the results reported on our paper. This will be particularly useful if others would like to propose an alternative method and would like to use DeepStrain for comparison. In addition, this serves as a first quality check step before using DeepStrain in more clinically-oriented research applications. 
+The first set of notebooks will focus on replicating some of the results reported in our paper. This will be particularly useful if others would like to propose an alternative method and would like to use DeepStrain for comparison. In addition, this serves as a first quality check step before using DeepStrain in more clinically-oriented research applications. 
 
 #### Global Strain 
 
