@@ -44,7 +44,11 @@ if 'motion' in opt.pipeline:
     
     for i, data in enumerate(dataset):
         filename = os.path.basename(dataset.filenames[i]).split('.')[0]
-
+        
+        # model was trained with cine data from base to apex.
+        # a different orientation could yield different values. 
+        # if you have the segmentation you can modify the images
+        # as shown in the example notebooks.
         x, nifti, nifti_resampled = data
         x_0, x_t = np.array_split(x,2,-1)
         y_t = netME([x_0, x_t]).numpy()
