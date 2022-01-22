@@ -110,8 +110,8 @@ def get_clinical_parameters(M_ed, M_es, voxel_spacing_mm):
     #print(M_ed.shape)
     RV_EDV_ml, RV_ESV_ml, RV_EF = get_clinical_parameters_rv(M_ed, M_es, voxel_spacing_mm)
     LV_EDV_ml, LV_ESV_ml, LV_EF, LV_mass_g = get_clinical_parameters_lv(M_ed, M_es, voxel_spacing_mm)
-    clinical_parameters = {'RV_EDV_ml':RV_EDV_ml, 'RV_ESV_ml':RV_ESV_ml, 'RV_EF':RV_EF, 
-                           'LV_EDV_ml':LV_EDV_ml, 'LV_ESV_ml':LV_ESV_ml, 'LV_EF':LV_EF, 'LV_mass_g':LV_mass_g}
+    clinical_parameters = {'LV EDV (mL)':[LV_EDV_ml], 'LV ESV (mL)':[LV_ESV_ml], 'LV EF (%)':[LV_EF], 'LV mass (g)':[LV_mass_g],
+                           'RV EDV (mL)':[RV_EDV_ml], 'RV ESV (mL)':[RV_ESV_ml], 'RV EF (%)':[RV_EF]}
     return clinical_parameters
 
 ## Stats
@@ -206,6 +206,5 @@ def compare_geometric_metrics_on_dataloader(loading_fn, listSIDs, listTimeFrames
         
     Geometric_params.index = pd.Index(np.repeat(listSIDs, len(tissue_labels)*len(listTimeFrames)), name='SubjectID') 
     return Geometric_params
-
 
 

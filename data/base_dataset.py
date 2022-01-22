@@ -6,6 +6,8 @@ import numpy as np
 from abc import ABC, abstractmethod
 from tensorflow.keras.utils import Sequence
 from scipy.ndimage.measurements import center_of_mass
+from dipy.align.reslice import reslice
+import nibabel as nib
 
 class BaseDataset(Sequence, ABC):
     """This class is an abstract base class (ABC) for datasets."""
@@ -130,5 +132,84 @@ def _roll2center(x, center):
 def _roll2center_crop(x, center):
     x = _roll2center(x, center)
     return _centercrop(x)
+    
+    
+#####################################################
+## FUNCTIONS TO ADD MORE FLEXIBILITY IN SEGMENTATION
+#####################################################
+
+def resample_nifti_inv(nifti_resampled, zooms, order=1, mode='nearest'):
+    """ Resample `nifti_resampled` to `zooms` resolution.
+    """
+    zooms_resampled  = nifti_resampled.header.get_zooms()[:3]
+    affine_resampled = nifti_resampled.affine 
+        
+    data_resampled, affine_resampled = reslice(nifti_resampled, 
+                                               affine_resampled, zooms_resampled, zooms, order=order, mode=mode)
+    nifti = nib.Nifti1Image(data_resampled, affine_resampled)
+    
+    return nifti
+    
+def convert_back_to_nifti(data_resampled, nifti_info_subject, inv_256x256=False, order=1, mode='nearest'):
+
+    if inv_256x256:
+        data_resampled_mod_corr = roll_and_pad_256x256_to_center_inv(data_resampled, nifti_info=nifti_info_subject)
+    else:
+        data_resampled_mod_corr = data_resampled
+        
+    affine           = nifti_info_subject['affine']
+    affine_resampled = nifti_info_subject['affine_resampled']
+    zooms            = nifti_info_subject['zooms'][:3]
+    zooms_resampled  = nifti_info_subject['zooms_resampled'][:3]
+    
+    data_resampled, affine_resampled = reslice(data_resampled_mod_corr, 
+                                               affine_resampled, zooms_resampled, zooms, order=order, mode=mode)
+    nifti = nib.Nifti1Image(data_resampled, affine_resampled)
+    
+    return nifti
+
+def roll(x,rx,ry):
+        x = np.roll(x,rx,axis=0)
+        x = np.roll(x,ry,axis=1)
+        return x
+    
+def roll2center(x, center):
+    return roll(x, int(x.shape[0]//2-center[0]), int(x.shape[1]//2-center[1]))
+    
+def pad_256x256(x):
+        xpad = (512-x.shape[0])//2, (512-x.shape[0])-(512-x.shape[0])//2
+        ypad = (512-x.shape[1])//2, (512-x.shape[1])-(512-x.shape[1])//2
+        pads = (xpad,ypad)+((0,0),)*(len(x.shape)-2)
+        vals = ((0,0),)*len(x.shape)
+        x = np.pad(x, pads, 'constant', constant_values=vals)
+        x = x[512//2-256//2:512//2+256//2,512//2-256//2:512//2+256//2]
+        return x
+    
+def roll_and_pad_256x256_to_center(x, center):
+    x = roll2center(x, center)
+    x = pad_256x256(x)
+    return x
+
+def roll_and_pad_256x256_to_center_inv(x, nifti_info):
+
+    # Recover 256x256 array that was center-cropped to 128x128!
+    x_256_256 = np.zeros((256,256)+x.shape[2:])
+    x_256_256[128-64:128+64,128-64:128+64] += x
+    
+    # Coordinates to put the image in its original location.
+    cx, cy         = nifti_info['center_resampled'][:2]
+    cx_mod, cy_mod = nifti_info['center_resampled_256x256'][:2]
+    
+    x_inv = np.zeros(nifti_info['shape_resampled'][:3]+x.shape[3:])
+
+    dx = min(int(cx),64)
+    dy = min(int(cy),64)
+    if (dx!=64)|(dy!=64):
+        print('WARNING:FOV < 128x128!')
+
+    x_inv[int(cx-dx):int(cx+dx),int(cy-dy):int(cy+dy)] += x_256_256[int(cx_mod-dx):int(cx_mod+dx),
+                                                                    int(cy_mod-dy):int(cy_mod+dy)]
+    return x_inv
+    
     
     
