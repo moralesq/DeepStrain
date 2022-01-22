@@ -178,8 +178,10 @@ class PolarMap():
         Err = Err.transpose((2,0,1))
         Ecc = Ecc.transpose((2,0,1))
         print('... radial strain')
+        print(Err.shape)
         V_err = self._project_to_aha_polar_map(Err)
         print('... circumferential strain')
+        print(Ecc.shape)
         V_ecc = self._project_to_aha_polar_map(Ecc)
 
         results = {'V_err':V_err, 'V_ecc':V_ecc, 'mask':mask}
@@ -428,9 +430,8 @@ def plot_bullseye(data,mu,vmin=None,vmax=None, savepath=None,cmap='RdBu_r', labe
     else:
         draw_circle(ax,100*np.array(mu), color=color, fs=fs, xshift=xshift, yshift=yshift)
     if savepath is not None:
-        if not cbar:
-            plt.tight_layout()
-        plt.savefig(savepath, dpi=600)
+        plt.savefig(savepath, dpi=100)
+   
     plt.show()
     
 def plot_bullseye_ratio(data,mu,vmin=None,vmax=None, savepath=None,cmap='RdBu_r', label='GPRS (%)', 
