@@ -12,4 +12,4 @@ Each point in the contour was then deformed according to the predicted displacem
 
 The videos below show the "tracked" deformation near the apical slices. 
 
-<img src='healthy_apical_deformation/video_3.gif' align="right" width=200>
+<img src='../healthy_apical_deformation/video_3.gif' align="right" width=200>
