@@ -19,6 +19,7 @@ The first Conv layer consists of a convolution-batchnorm-prelu operations. Below
 
 <br><br><br><br>
 
+<br /><br /><br />
 The video below loops instead across various time frames while maintaining the channel constant. 
 
 <img src='video_2.gif' align="right" width=1000>
