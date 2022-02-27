@@ -23,7 +23,7 @@ The video below loops instead across various time frames while maintaining the c
 
 <img src='video_2.gif' align="right" width=1000>
 
-<br><br><br><br>
+<br />
 ### Conv Layer 2
 
 This is equivalent as Conv layer 1. 
