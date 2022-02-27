@@ -12,23 +12,24 @@ Below we visualize the features extracted by the first enconder:
 ### Conv Layer 1 
 
 The first Conv layer consists of a convolution-batchnorm-prelu operations. Below we visualize the output of each when the inputs are [V(t=0), V(t=0)] (row 1) and [V(t=0), V(t=10)] (row 2). The third row shows the difference between the first and the second rows. The video loops across various extracted features (i.e., channel dimension). Notice (1) that prelu layer output does not have negative values, (2) that the main differences between the rows are located in regions where myocaridum deforms.  
-<br><br><br><br>
+
 <p float="left">
   <img src='video_1.gif' align="right" width=1000>
 </p>
 
-
+<br><br><br><br>
 
 The video below loops instead across various time frames while maintaining the channel constant. 
 
 <img src='video_2.gif' align="right" width=800>
 
+<br><br><br><br>
 ### Conv Layer 2
 
 This is equivalent as Conv layer 1. 
 
 <img src='video_3.gif' align="right" width=800>
-
+<br><br><br><br>
 ### Conv Layer 3
 <img src='video_4.gif' align="right" width=800>
 
