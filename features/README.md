@@ -29,8 +29,12 @@ The video below loops instead across various time frames while maintaining the c
 This is equivalent as Conv layer 1. 
 
 <img src='video_3.gif' align="right" width=1000>
+
 <br><br><br><br>
 
-### Conv Layer 3
 <img src='video_4.gif' align="right" width=1000>
+### Conv Layer 3
 
+<img src='video_5.gif' align="right" width=1000>
+
+<img src='video_6.gif' align="right" width=1000>
