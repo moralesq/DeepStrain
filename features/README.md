@@ -37,3 +37,9 @@ This is equivalent as Conv layer 1.
 <img src='video_5.gif' align="right" width=1000>
 
 <img src='video_6.gif' align="right" width=1000>
+
+
+## Final Three Layers
+
+<img src='video_7.gif' align="right" width=1000>
+
