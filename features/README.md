@@ -17,23 +17,21 @@ The first Conv layer consists of a convolution-batchnorm-prelu operations. Below
   <img src='video_1.gif' align="right" width=1000>
 </p>
 
-<br><br><br><br>
-
-<br /><br /><br />
 The video below loops instead across various time frames while maintaining the channel constant. 
 
 <img src='video_2.gif' align="right" width=1000>
 
-<br />
 ### Conv Layer 2
 
 This is equivalent as Conv layer 1. 
 
+
+
 <img src='video_3.gif' align="right" width=1000>
 
-<br><br><br><br>
-
 <img src='video_4.gif' align="right" width=1000>
+
+
 ### Conv Layer 3
 
 <img src='video_5.gif' align="right" width=1000>
