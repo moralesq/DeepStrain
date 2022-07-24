@@ -1,8 +1,10 @@
 # DeepStrain
 
-Evaluation Relative to Manual Tagging Tracking    Evaluation Relative to Manual Tagging Tracking
+<p align="center">
+    Evaluation Relative to Manual Tagging Tracking    Evaluation Relative to Manual Tagging Tracking
+</p>
 
-<img src='imgs/landmarks.gif' align="left" width=440>
+<img src='imgs/landmarks.gif' align="center" width=440>
 
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
