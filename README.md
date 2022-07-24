@@ -2,9 +2,11 @@
 
 <p align="center">
     Evaluated Relative to Tagging CMR
+    <br>
     <img src='imgs/landmarks.gif' width=640>
     <br><br><br><br>
     Evaluated in Patients Across MRI Vendors
+    <br>
     <img src='imgs/DeepStrain_vs_CVI_Vid3.gif' width=440>
     <br><br><br><br>
 </p>
