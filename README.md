@@ -2,14 +2,15 @@
 
 <p align="center">
     Evaluation Relative to Manual Tracking on Tagging CMR
+    <img src='imgs/landmarks.gif' width=640>
+    <br><br><br><br>
+    Evaluation Relative to Manual Tracking on Tagging CMR
     <img src='imgs/landmarks.gif' width=440>
+    <br><br><br><br>
 </p>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
 
-<img src='imgs/landmarks.gif' align="right" width=440>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
 
 Tensorflow implementation for cardiac segmentation, motion estimation, and strain analysis from cinematic magnetic resonance imaging (cine-MRI) data. For example,  given a 4D (3D+time) nifti dataset, our model is able to provide segmentations, motion estimates, and global measures of myocardial strain.
 
