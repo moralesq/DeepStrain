@@ -11,7 +11,7 @@
     <br><br><br><br>
     Evaluated Against Feature Tracking in X Patients
     <br>
-    <img src='imgs/DeepStrain_vs_CVI_figure_2.png' width=540>
+    <img src='imgs/DeepStrain_vs_CVI_figure_2.png' width=840>
     <br><br><br><br>
 </p>
 
