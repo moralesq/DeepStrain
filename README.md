@@ -9,6 +9,10 @@
     <br>
     <img src='imgs/DeepStrain_vs_CVI_Vid3.gif' width=440>
     <br><br><br><br>
+    Evaluated Against Feature Tracking in X Patients
+    <br>
+    <img src='imgs/DeepStrain_vs_CVI_figure_2.gif' width=440>
+    <br><br><br><br>
 </p>
 
 
