@@ -1,6 +1,5 @@
-# DeepStrain
-
 <p align="center">
+    # DeepStrain
     Evaluation Relative to Manual Tracking on Tagging CMR
     <img src='imgs/landmarks.gif' width=640>
     <br><br><br><br>
