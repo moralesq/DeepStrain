@@ -1,10 +1,12 @@
+# DeepStrain
+
 <img src='imgs/landmarks.gif' align="right" width=440>
 
 <br><br><br><br>
 
-# DeepStrain
-[Paper](https://www.frontiersin.org/articles/10.3389/fcvm.2021.730316/full)
+<img src='imgs/landmarks.gif' align="right" width=440>
 
+<br><br><br><br>
 
 Tensorflow implementation for cardiac segmentation, motion estimation, and strain analysis from cinematic magnetic resonance imaging (cine-MRI) data. For example,  given a 4D (3D+time) nifti dataset, our model is able to provide segmentations, motion estimates, and global measures of myocardial strain.
 
@@ -121,8 +123,8 @@ The test results (4D radial and circumferential strain) will be saved to nifti f
 
 If you find DeepStrain or some part of the code useful, please cite as appropiate:
 
-- **DeepStrain: A Deep Learning Workflow for the Automated Characterization of Cardiac Mechanics.** [Manuel A. Morales](https://catanalab.martinos.org/lab-members/manuel-a-morales/), [Maaike van den Boomen](https://nguyenlab.mgh.harvard.edu/maaike-van-den-boomen-ms/), [Christopher Nguyen](https://nguyenlab.mgh.harvard.edu/christopher-nguyen-phd-2/), [Jayashree Kalpathy-Cramer](https://www.ccds.io/leadership-team/jayashree-kalpathy-cramer/), [Bruce R. Rosen](https://www.martinos.org/investigator/bruce-rosen/), [Collin M. Stultz](https://mitibmwatsonailab.mit.edu/people/collin-m-stultz/), [David Izquierdo-Garcia](https://catanalab.martinos.org/lab-members/david-izquierdo-garcia/),  [Ciprian Catana](https://catanalab.martinos.org/lab-members/ciprian-catana/). Frontiers in Cardiovascular Medicine, 2021. DOI:https://doi.org/10.3389/fcvm.2021.730316.
+- **DeepStrain: A Deep Learning Workflow for the Automated Characterization of Cardiac Mechanics.** [Manuel A. Morales](https://catanalab.martinos.org/lab-members/manuel-a-morales/), [Maaike van den Boomen](https://nguyenlab.mgh.harvard.edu/maaike-van-den-boomen-ms/), [Christopher Nguyen](https://nguyenlab.mgh.harvard.edu/christopher-nguyen-phd-2/), [Jayashree Kalpathy-Cramer](https://www.ccds.io/leadership-team/jayashree-kalpathy-cramer/), [Bruce R. Rosen](https://www.martinos.org/investigator/bruce-rosen/), [Collin M. Stultz](https://mitibmwatsonailab.mit.edu/people/collin-m-stultz/), [David Izquierdo-Garcia](https://catanalab.martinos.org/lab-members/david-izquierdo-garcia/),  [Ciprian Catana](https://catanalab.martinos.org/lab-members/ciprian-catana/). Frontiers in Cardiovascular Medicine, 2021. DOI: https://doi.org/10.3389/fcvm.2021.730316.
 
-- **DeepStrain Evidence of Asymptomatic Left Ventricular Diastolic and Systolic Dysfunction in Young Adults With Cardiac Risk Factors.** [Manuel A. Morales](https://catanalab.martinos.org/lab-members/manuel-a-morales/), Gert J. H. Snel, [Maaike van den Boomen](https://nguyenlab.mgh.harvard.edu/maaike-van-den-boomen-ms/), Ronald J. H. Borra, Vincent M. van Deursen, Riemer H. J. A. Slart, [David Izquierdo-Garcia](https://catanalab.martinos.org/lab-members/david-izquierdo-garcia/), Niek H. J. Prakken,  [Ciprian Catana](https://catanalab.martinos.org/lab-members/ciprian-catana/). Frontiers in Cardiovascular Medicine, 2022. DOI:https://doi.org/10.3389/fcvm.2022.831080
+- **DeepStrain Evidence of Asymptomatic Left Ventricular Diastolic and Systolic Dysfunction in Young Adults With Cardiac Risk Factors.** [Manuel A. Morales](https://catanalab.martinos.org/lab-members/manuel-a-morales/), Gert J. H. Snel, [Maaike van den Boomen](https://nguyenlab.mgh.harvard.edu/maaike-van-den-boomen-ms/), Ronald J. H. Borra, Vincent M. van Deursen, Riemer H. J. A. Slart, [David Izquierdo-Garcia](https://catanalab.martinos.org/lab-members/david-izquierdo-garcia/), Niek H. J. Prakken,  [Ciprian Catana](https://catanalab.martinos.org/lab-members/ciprian-catana/). Frontiers in Cardiovascular Medicine, 2022. DOI: https://doi.org/10.3389/fcvm.2022.831080
 
 - **Comparison of DeepStrain and Feature Tracking for Cardiac MRI Strain Analysis.** [Manuel A. Morales](https://cardiacmr.hms.harvard.edu/people/manuel-morales-phd), [Julia Cirillo](https://cardiacmr.hms.harvard.edu/people/julia-cirillo), [Kei Nakata](https://cardiacmr.hms.harvard.edu/people/kei-nakata-md-phd), [Selcuk Kucukseymen](https://cardiacmr.hms.harvard.edu/people/selcuk-kucukseymen-md), [Long H. Ngo](https://www.bidmc.org/research/research-by-department/medicine/general-medicine-research/research-faculty/long-h-ngo-phd), [David Izquierdo-Garcia](https://catanalab.martinos.org/lab-members/david-izquierdo-garcia/),  [Ciprian Catana](https://catanalab.martinos.org/lab-members/ciprian-catana/), [Reza Nezafat](https://cardiacmr.hms.harvard.edu/people/reza-nezafat). Journal of Magnetic Resonance Imaging, 2022. DOI:
