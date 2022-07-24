@@ -1,6 +1,6 @@
 # DeepStrain
 
-<img src='imgs/landmarks.gif' align="right" width=440>
+<img src='imgs/landmarks.gif' align="right" width=440 title="Evaluation Relative to Manual Tagging Tracking">
 
 <br><br><br><br>
 
