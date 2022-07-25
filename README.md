@@ -28,8 +28,7 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
     <br><br><br><br>
 
 </p>
-|               |                               |                               |
-| ------------- | ----------------------------- | ----------------------------- |
+
 | First Header  | Second Header | Second Header | Second Header | Second Header |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
