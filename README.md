@@ -1,7 +1,6 @@
 <img src='imgs/landmarks.gif' align="right" width=440>
 
-[[Paper](https://www.frontiersin.org/articles/10.3389/fcvm.2021.730316/full)] [[installation](https://github.com/moralesq/DeepStrain/tree/main/installation)] [[examples](https://github.com/moralesq/DeepStrain/tree/main/notebooks)]
-<img src="imgs/Fig_1.png" width="800">
+[[paper](https://www.frontiersin.org/articles/10.3389/fcvm.2021.730316/full)] [[installation](https://github.com/moralesq/DeepStrain/tree/main/installation)] [[notebooks](https://github.com/moralesq/DeepStrain/tree/main/notebooks)]
 
 <br><br><br><br>
 
