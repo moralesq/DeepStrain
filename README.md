@@ -31,12 +31,6 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
     </p>
     <br><br><br><br>
 
-    | Linear Regression Slope | GRS               | GCS               | 
-    | ----------------------- | ----------------- | ----------------- | 
-    | Vendor 1 (n = 466)      | 1.06 (1.03, 1.08) | 0.98 (0.98, 1.01) |
-    | Vendor 2 (n = 114)      | 1.04 (0.99, 1.09) | 1.0 (0.96, 1.03)  |
-    | Total (n = 580)         | 1.05 (1.03, 1.08) | 0.99 (0.98, 1.01) |
-
 </p>
 
 #### Agreement Between cvi42 Feature Tracking and DeepStrain
@@ -58,6 +52,17 @@ GRC = global radial strain; GCS = global circumferential strain.
 Vendor 1 = 1.5T (Achieva; Philips Medical Systems, Best, the Netherlands); Vendor 2 = 3T (MAGNETOM Vida; Siemens Healthcare, Erlangen, Germany).
 Data are the slope (95% confidence interval of the slope) and Pearson correlation coefficient (r).
 
+# Application
+
+<p align="center">
+    <img src='imgs/figure_4_Global_SRe.jpg' width=840>
+    <br>
+    <p align="justify">
+    Global strain rate. Measures of (a) circumferential and (b) radial early-diastolic strain rate (SR) in controls and risk factor groups. Strain results are visualized as mean with 95% confidence interval. Post-hoc test by Bonferroni: * p < 0.05; ** p < 0.01; *** p < 0.001  
+    </p>
+    <br><br><br><br>
+
+</p>
 
 ## Publications
 
