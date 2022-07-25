@@ -142,11 +142,13 @@ def _roll2center_crop(x, center):
 def resample_nifti_inv(nifti_resampled, zooms, order=1, mode='nearest'):
     """ Resample `nifti_resampled` to `zooms` resolution.
     """
+    data_resampled   = nifti_resampled.get_fdata()
     zooms_resampled  = nifti_resampled.header.get_zooms()[:3]
     affine_resampled = nifti_resampled.affine 
         
-    data_resampled, affine_resampled = reslice(nifti_resampled, 
+    data_resampled, affine_resampled = reslice(data_resampled, 
                                                affine_resampled, zooms_resampled, zooms, order=order, mode=mode)
+
     nifti = nib.Nifti1Image(data_resampled, affine_resampled)
     
     return nifti

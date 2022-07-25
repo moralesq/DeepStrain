@@ -1,6 +1,6 @@
 <img src='imgs/landmarks.gif' align="right" width=440>
 
-[[paper](https://www.frontiersin.org/articles/10.3389/fcvm.2021.730316/full)] [[installation](https://github.com/moralesq/DeepStrain/tree/main/installation)] [[notebooks](https://github.com/moralesq/DeepStrain/tree/main/notebooks)]
+[[paper](https://www.frontiersin.org/articles/10.3389/fcvm.2021.730316/full)] [[installation](https://github.com/moralesq/DeepStrain/tree/main/installation)] [[examples](https://github.com/moralesq/DeepStrain/tree/main/examples)]
 
 <br><br><br><br>
 
@@ -10,6 +10,7 @@
 **DeepStrain: A Deep Learning Workflow for the Automated Characterization of Cardiac Mechanics.**  
 
 Tensorflow implementation for cardiac segmentation, motion estimation, and strain analysis from balanced steady-state free-precession (bSSFP) cine MRI images.
+
 **Note**: The current software works well with Tensorflow 2.3.1+.
 
 # Evaluation

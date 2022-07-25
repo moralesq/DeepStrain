@@ -1,23 +1,23 @@
-# Notebooks 
+# Examples
+
+
 
 ## Table of Contents 
     
-- [Getting Started](#Getting-Started)
-- [Pre-trained Models](#Pre-trained-Models)
 - [Tutorial Jupyter Notebooks](#Tutorial-Jupyter-Notebooks)
   * [Replication of Paper Results](#Replication-of-Paper-Results)
     + [Global Strain](#Global-Strain)
-      - [ACDC](https://github.com/moralesq/DeepStrain/blob/main/notebooks/2_replicate_paper_results_ACDC_global_strain_from_scratch.ipynb)
-      - [CMAC](https://github.com/moralesq/DeepStrain/blob/main/notebooks/3_replicate_paper_results_CMAC_global_strain_from_scratch.ipynb)
-  * [Training](#Training)
-- [Automated Scripts](#Automated-Scripts)
-  * [Segmentation](#Automated-Scripts)
-  * [Motion Estimation](#Motion-Estimation)
-  * [Strain Analysis](#Strain-Analysis)
-  
-## Tutorial Jupyter Notebooks
+      - [ACDC](https://github.com/moralesq/DeepStrain/blob/main/examples/2_replicate_paper_results_ACDC_global_strain_from_scratch.ipynb)
+      - [CMAC](https://github.com/moralesq/DeepStrain/blob/main/examples/3_replicate_paper_results_CMAC_global_strain_from_scratch.ipynb)
 
-Our goal is to provide various Jupyter notebooks to illustrate the various ways our method can be used. Although we already provide automated scripts, these notebooks will be use useful to provide some flexibility and potentially lead to applications in other domains. 
+
+## Tutorial Jupyter Notebooks and Scripts
+
+Our goal is to provide various Jupyter notebooks and scripts to illustrate the various ways our method can be used. Although we already provide automated scripts, these notebooks will be use useful to provide some flexibility and potentially lead to applications in other domains. 
+
+### Replication of DeepStrain vs cvi42 Feature Tracking paper 
+
+If you're interested in using DeepStrain for processsing of large databases, I recommend you take a close look at the [script](https://github.com/moralesq/DeepStrain/blob/main/examples/deepstrain_vs_cvi.py) we used to compare DeepStrain to cvi42 Feature tracking. 
 
 ### Replication of Paper Results
 
