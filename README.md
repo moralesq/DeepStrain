@@ -13,7 +13,7 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
 
 **Note**: The current software works well with Tensorflow 2.3.1+.
 
-# Evaluation
+## Evaluation
 
 <p align="center">
     DeepStrain Tracking in Patients Across MRI Vendors
@@ -54,7 +54,7 @@ GRC = global radial strain; GCS = global circumferential strain.
 Vendor 1 = 1.5T (Achieva; Philips Medical Systems, Best, the Netherlands); Vendor 2 = 3T (MAGNETOM Vida; Siemens Healthcare, Erlangen, Germany).
 Data are the slope (95% confidence interval of the slope) and Pearson correlation coefficient (r).
 
-# Application
+## Application
 
 <p align="center">
     <img src='imgs/figure_4_Global_SRe.jpg' width=840>
