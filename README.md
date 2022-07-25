@@ -1,19 +1,19 @@
 # DeepStrain
 
 <p align="center">
-    **Evaluation Relative to Tagging CMR**
+    ###### Evaluation Relative to Tagging CMR
     <br>
     <img src='imgs/landmarks.gif' width=640>
     <br><br><br><br>
-    **DeepStrain Tracking in Patients Across MRI Vendors**
+    ###### DeepStrain Tracking in Patients Across MRI Vendors
     <br>
     <img src='imgs/DeepStrain_vs_CVI_Vid3.gif' width=440>
     <br><br><br><br>
-    **Comparison of DeepStrain Tracking and Feature Tracking in Patients**
+    ###### Comparison of DeepStrain Tracking and Feature Tracking in Patients
     <br>
     <img src='imgs/DeepStrain_vs_CVI_figure_2.png' width=840>
     <br><br><br><br>
-    **Evaluation Relative to Feature Tracking in Patients**
+    ###### Evaluation Relative to Feature Tracking in Patients
     <br>
     <img src='imgs/DeepStrain_vs_CVI_figure_4.png' width=840>
     <br><br><br><br>
