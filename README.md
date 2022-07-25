@@ -26,16 +26,13 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
     <br>
     <img src='imgs/DeepStrain_vs_CVI_figure_4.png' width=840>
     <br><br><br><br>
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+
 </p>
 
-| Command | Description |
-| --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
+| First Header  | Second Header | Second Header |
+| ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  |
 ## Publications
 
 If you find DeepStrain or some part of the code useful, please cite as appropiate:
