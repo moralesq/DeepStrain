@@ -62,7 +62,7 @@ Data are the slope (95% confidence interval of the slope) and Pearson correlatio
     <p align="justify">
     The study cohort consisted of 119 participants (35 ± 5 years, 50% male) including the control group with 30 subjects; RFG1 with 39 overweight subjects; RFG2 with 30 hypertensive subjects, including 13 (43%) with additional overweight; RFG3 with 20 T2DM subjects, including 11 (55%) with additional overweight, 1 (5%) with additional hypertension and 8 (40%) with both. Measures of (a) circumferential and (b) radial early-diastolic strain rate (SR) in controls and risk factor groups. Strain results are visualized as mean with 95% confidence interval. Post-hoc test by Bonferroni: * p < 0.05; ** p < 0.01; *** p < 0.001. RFG = risk factor group.
     </p>
-    <br><br><br><br>
+    <br><br>
 
 </p>
 
