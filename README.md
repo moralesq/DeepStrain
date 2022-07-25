@@ -1,36 +1,31 @@
-# DeepStrain
-
 <p align="center">
-    ###### Evaluation Relative to Tagging CMR
+    Evaluation Relative to Tagging CMR
     <br>
     <img src='imgs/landmarks.gif' width=640>
     <br><br><br><br>
-    ###### DeepStrain Tracking in Patients Across MRI Vendors
+    DeepStrain Tracking in Patients Across MRI Vendors
     <br>
     <img src='imgs/DeepStrain_vs_CVI_Vid3.gif' width=440>
     <br><br><br><br>
-    ###### Comparison of DeepStrain Tracking and Feature Tracking in Patients
+    Comparison of DeepStrain Tracking and Feature Tracking in Patients
     <br>
     <img src='imgs/DeepStrain_vs_CVI_figure_2.png' width=840>
     <br><br><br><br>
-    ###### Evaluation Relative to Feature Tracking in Patients
+    Evaluation Relative to Feature Tracking in Patients
     <br>
     <img src='imgs/DeepStrain_vs_CVI_figure_4.png' width=840>
     <br><br><br><br>
 </p>
 
-
-
-
-Tensorflow implementation for cardiac segmentation, motion estimation, and strain analysis from cinematic magnetic resonance imaging (cine-MRI) data. For example,  given a 4D (3D+time) nifti dataset, our model is able to provide segmentations, motion estimates, and global measures of myocardial strain.
-
-**Note**: The current software works well with Tensorflow 2.3.1+.
+# DeepStrain
 
 <img src="imgs/Fig_1.png" width="800">
 
 **DeepStrain: A Deep Learning Workflow for the Automated Characterization of Cardiac Mechanics.**  
 
-[Manuel A. Morales](https://catanalab.martinos.org/lab-members/manuel-a-morales/), [Maaike van den Boomen](https://nguyenlab.mgh.harvard.edu/maaike-van-den-boomen-ms/), [Christopher Nguyen](https://nguyenlab.mgh.harvard.edu/christopher-nguyen-phd-2/), [Jayashree Kalpathy-Cramer](https://www.ccds.io/leadership-team/jayashree-kalpathy-cramer/), [Bruce R. Rosen](https://www.martinos.org/investigator/bruce-rosen/), [Collin M. Stultz](https://mitibmwatsonailab.mit.edu/people/collin-m-stultz/), [David Izquierdo-Garcia](https://catanalab.martinos.org/lab-members/david-izquierdo-garcia/),  [Ciprian Catana](https://catanalab.martinos.org/lab-members/ciprian-catana/)
+Tensorflow implementation for cardiac segmentation, motion estimation, and strain analysis from cinematic magnetic resonance imaging (cine-MRI) data. For example,  given a 4D (3D+time) nifti dataset, our model is able to provide segmentations, motion estimates, and global measures of myocardial strain.
+
+**Note**: The current software works well with Tensorflow 2.3.1+.
 
 # Table of Contents 
     
