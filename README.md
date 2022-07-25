@@ -19,17 +19,23 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
     <img src='imgs/DeepStrain_vs_CVI_Vid3.gif' width=440>
     <br>
     <p align="justify">
-    Short axis cine images are shown at the mid-ventricle during end diastole. To visualize tracking, myocardial contours of the endocardial (red) and epicardial (green) left ventricular wall defined at end diastole are deformed to end diastole using displacement vectors based on deep learning and cvi42 feature tracking (FT). The vectors are also used to evaluate myocardial global circumferential (GCS) and radial (GRS) strain across the cardiac cycle. The resulting strain curves with deep learning (red dashed line) and cvi42 FT (black solid line) are shown for each patient. (a) 64-year-old female with prior myocardial infarction. (b) 54-year-old male with prior myocardial infarction and ventricular tachycardia. (c) 69-year-old male with prior myocardial infarction, ventricular tachycardia, and dilated cardiomyopathy. (d) 19-year-old male with hypertrophic cardiomyopathy. Both tracking techniques indicate reduced anatomical deformation at similar regions (white arrows). The corresponding strain curves also demonstrate temporal agreement.  (a-b) Vendor 1 = 1.5T (Achieva; Philips Medical Systems, Best, the Netherlands). (c-d) Vendor 2 = 3T (MAGNETOM Vida; Siemens Healthcare, Erlangen, Germany). 
+    Short-axis bSSFP cine MRI images are shown at the mid-ventricle. To visualize tracking, myocardial contours of the endocardial (red) and epicardial (green) left ventricular wall defined at end diastole were deformed to end systole using displacement vectors based on DeepStrain. (a) 64-year-old female with prior myocardial infarction. (b) 54-year-old male with prior myocardial infarction and ventricular tachycardia. (c) 69-year-old male with prior myocardial infarction, ventricular tachycardia, and dilated cardiomyopathy. (d) 19-year-old male with hypertrophic cardiomyopathy. (a-b) Vendor 1 = 1.5T (Achieva; Philips Medical Systems, Best, the Netherlands). (c-d) Vendor 2 = 3T (MAGNETOM Vida; Siemens Healthcare, Erlangen, Germany). 
     </p>
-    <br><br><br><br>
-    Comparison of DeepStrain Tracking and Feature Tracking in Patients
-    <br>
-    <img src='imgs/DeepStrain_vs_CVI_figure_2.png' width=840>
     <br><br><br><br>
     Evaluation Relative to Feature Tracking in Patients
     <br>
     <img src='imgs/DeepStrain_vs_CVI_figure_4.png' width=840>
     <br><br><br><br>
+    |              | Header 3                       ||
+    |              | Subheader 3.1  | Subheader 3.2  |
+    |==============|----------------|----------------|
+    | Row Header 1 | Colspan only                   ||
+    | Row Header 2 | Rowspan only   | Cell           |
+    | Row Header 3 |Rowspan only   | Cell            |
+    | Row Header 4 | Right-aligned :|: Left-aligned  |
+    :              :    multi-line  :  multi-line    :
+    :              :         text.  :  text.         :
+    |--------------|----------------|----------------|
 </p>
 
 
