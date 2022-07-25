@@ -21,9 +21,9 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
     <img src='imgs/DeepStrain_vs_CVI_Vid3.gif' width=440>
     <br>
     <p align="justify">
-    Short-axis bSSFP cine MRI images are shown at the mid-ventricle. To visualize tracking, myocardial contours of the endocardial (red) and epicardial (green) left ventricular wall defined at end diastole were deformed to end systole using displacement vectors based on DeepStrain. (a) 64-year-old female with prior myocardial infarction. (b) 54-year-old male with prior myocardial infarction and ventricular tachycardia. (c) 69-year-old male with prior myocardial infarction, ventricular tachycardia, and dilated cardiomyopathy. (d) 19-year-old male with hypertrophic cardiomyopathy. (a-b) Vendor 1 = 1.5T (Achieva; Philips Medical Systems, Best, the Netherlands). (c-d) Vendor 2 = 3T (MAGNETOM Vida; Siemens Healthcare, Erlangen, Germany). 
+    Short-axis bSSFP cine MRI images are shown at the mid-ventricle. To visualize tracking, myocardial contours of the endocardial (red) and epicardial (green) left ventricular wall defined at end diastole were deformed to end systole using displacement vectors based on DeepStrain. Vendor 1 = 1.5T (Achieva; Philips Medical Systems, Best, the Netherlands). Vendor 2 = 3T (MAGNETOM Vida; Siemens Healthcare, Erlangen, Germany). 
     </p>
-    <br><br><br><br>
+    <br><br>
     Evaluation Relative to Feature Tracking in Patients
     <br>
     <img src='imgs/DeepStrain_vs_CVI_figure_4.png' width=840>
@@ -31,7 +31,7 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
     <p align="justify">
     Measurements of global radial and circumferential strain derived from cvi42 feature tracking were compared to those derived with DeepStrain. Each dot represents a single subject (n = 580). Solid line shows linear regression analyses based on images acquired in Philips (blue) and Siemens (red) MRI scanners. On the left, the slopes (y = 1.06×, y = 1.04×) represent a -6% and -4% disagreement in measurements of global radial strain. The slopes (y = 0.99×, y = 1.00×) on the right represent a 1% and 0% disagreement in measurements of global circumferential strain. 
     </p>
-    <br><br>
+    <br>
 
 </p>
 
