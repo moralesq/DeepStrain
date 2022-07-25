@@ -1,10 +1,12 @@
 <img src='imgs/landmarks.gif' align="right" width=440>
 
+[[Paper](https://www.frontiersin.org/articles/10.3389/fcvm.2021.730316/full)] [[installation](https://github.com/moralesq/DeepStrain/tree/main/installation)] [[examples](https://github.com/moralesq/DeepStrain/tree/main/notebooks)]
+<img src="imgs/Fig_1.png" width="800">
+
 <br><br><br><br>
 
 # DeepStrain
-[Paper](https://www.frontiersin.org/articles/10.3389/fcvm.2021.730316/full) [installation](https://github.com/moralesq/DeepStrain/tree/main/installation) [examples](https://github.com/moralesq/DeepStrain/tree/main/notebooks)
-<img src="imgs/Fig_1.png" width="800">
+
 
 **DeepStrain: A Deep Learning Workflow for the Automated Characterization of Cardiac Mechanics.**  
 
