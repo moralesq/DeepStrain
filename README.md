@@ -25,7 +25,17 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
     Evaluation Relative to Feature Tracking in Patients
     <br>
     <img src='imgs/DeepStrain_vs_CVI_figure_4.png' width=840>
+    <br>
+    <p align="justify">
+    Measurements of global radial and circumferential strain derived from cvi42 feature tracking were compared to those derived with DeepStrain. Each dot represents a single subject (n = 580). Solid line shows linear regression analyses based on images acquired in Philips (blue) and Siemens (red) MRI scanners. On the left, the slopes (y = 1.06×, y = 1.04×) represent a -6% and -4% disagreement in measurements of global radial strain. The slopes (y = 0.99×, y = 1.00×) on the right represent a 1% and 0% disagreement in measurements of global circumferential strain. 
+    </p>
     <br><br><br><br>
+
+    | Linear Regression Slope | GRS               | GCS               | 
+    | ----------------------- | ----------------- | ----------------- | 
+    | Vendor 1 (n = 466)      | 1.06 (1.03, 1.08) | 0.98 (0.98, 1.01) |
+    | Vendor 2 (n = 114)      | 1.04 (0.99, 1.09) | 1.0 (0.96, 1.03)  |
+    | Total (n = 580)         | 1.05 (1.03, 1.08) | 0.99 (0.98, 1.01) |
 
 </p>
 
