@@ -1,5 +1,20 @@
 # Notebooks 
 
+## Table of Contents 
+    
+- [Getting Started](#Getting-Started)
+- [Pre-trained Models](#Pre-trained-Models)
+- [Tutorial Jupyter Notebooks](#Tutorial-Jupyter-Notebooks)
+  * [Replication of Paper Results](#Replication-of-Paper-Results)
+    + [Global Strain](#Global-Strain)
+      - [ACDC](https://github.com/moralesq/DeepStrain/blob/main/notebooks/2_replicate_paper_results_ACDC_global_strain_from_scratch.ipynb)
+      - [CMAC](https://github.com/moralesq/DeepStrain/blob/main/notebooks/3_replicate_paper_results_CMAC_global_strain_from_scratch.ipynb)
+  * [Training](#Training)
+- [Automated Scripts](#Automated-Scripts)
+  * [Segmentation](#Automated-Scripts)
+  * [Motion Estimation](#Motion-Estimation)
+  * [Strain Analysis](#Strain-Analysis)
+  
 ## Tutorial Jupyter Notebooks
 
 Our goal is to provide various Jupyter notebooks to illustrate the various ways our method can be used. Although we already provide automated scripts, these notebooks will be use useful to provide some flexibility and potentially lead to applications in other domains. 
