@@ -39,7 +39,7 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
 
 
 | Pearson Correlation Coefficient (r) | GRS  | GCS  | 
-| ----------------------------------- | ------------| 
+| ----------------------------------- | ---- | -----| 
 | Vendor 1 (n = 466)                  | 0.85 | 0.91 |
 | Vendor 2 (n = 114)                  | 0.83 | 0.88 |
 | Total (n = 580)                     | 0.85 | 0.91 |
