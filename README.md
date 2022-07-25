@@ -17,7 +17,10 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
     DeepStrain Tracking in Patients Across MRI Vendors
     <br>
     <img src='imgs/DeepStrain_vs_CVI_Vid3.gif' width=440>
+    <br>
+    <p align="justify">
     Short axis cine images are shown at the mid-ventricle during end diastole. To visualize tracking, myocardial contours of the endocardial (red) and epicardial (green) left ventricular wall defined at end diastole are deformed to end diastole using displacement vectors based on deep learning and cvi42 feature tracking (FT). The vectors are also used to evaluate myocardial global circumferential (GCS) and radial (GRS) strain across the cardiac cycle. The resulting strain curves with deep learning (red dashed line) and cvi42 FT (black solid line) are shown for each patient. (a) 64-year-old female with prior myocardial infarction. (b) 54-year-old male with prior myocardial infarction and ventricular tachycardia. (c) 69-year-old male with prior myocardial infarction, ventricular tachycardia, and dilated cardiomyopathy. (d) 19-year-old male with hypertrophic cardiomyopathy. Both tracking techniques indicate reduced anatomical deformation at similar regions (white arrows). The corresponding strain curves also demonstrate temporal agreement.  (a-b) Vendor 1 = 1.5T (Achieva; Philips Medical Systems, Best, the Netherlands). (c-d) Vendor 2 = 3T (MAGNETOM Vida; Siemens Healthcare, Erlangen, Germany). 
+    </p>
     <br><br><br><br>
     Comparison of DeepStrain Tracking and Feature Tracking in Patients
     <br>
