@@ -31,7 +31,7 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
     <p align="justify">
     Measurements of global radial and circumferential strain derived from cvi42 feature tracking were compared to those derived with DeepStrain. Each dot represents a single subject (n = 580). Solid line shows linear regression analyses based on images acquired in Philips (blue) and Siemens (red) MRI scanners. On the left, the slopes (y = 1.06×, y = 1.04×) represent a -6% and -4% disagreement in measurements of global radial strain. The slopes (y = 0.99×, y = 1.00×) on the right represent a 1% and 0% disagreement in measurements of global circumferential strain. 
     </p>
-    <br><br><br><br>
+    <br><br>
 
 </p>
 
