@@ -29,11 +29,26 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
 
 </p>
 
-| First Header  |                Second Header |  Second Header |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Content Cell  |               |               | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+#### Agreement Between cvi42 Feature Tracking and DeepStrain
+
+| Linear Regression Slope | GRS               | GCS               | 
+| ----------------------- | ----------------- | ----------------- | 
+| Vendor 1 (n = 466)      | 1.06 (1.03, 1.08) | 0.98 (0.98, 1.01) |
+| Vendor 2 (n = 114)      | 1.04 (0.99, 1.09) | 1.0 (0.96, 1.03)  |
+| Total (n = 580)         | 1.05 (1.03, 1.08) | 0.99 (0.98, 1.01) |
+
+
+| Pearson Correlation Coefficient (r) | GRS  | GCS  | 
+| ----------------------------------- | ------------| 
+| Vendor 1 (n = 466)                  | 0.85 | 0.91 |
+| Vendor 2 (n = 114)                  | 0.83 | 0.88 |
+| Total (n = 580)                     | 0.85 | 0.91 |
+
+GRC = global radial strain; GCS = global circumferential strain. 
+Vendor 1 = 1.5T (Achieva; Philips Medical Systems, Best, the Netherlands); Vendor 2 = 3T (MAGNETOM Vida; Siemens Healthcare, Erlangen, Germany).
+Data are the slope (95% confidence interval of the slope) and Pearson correlation coefficient (r).
+
+
 ## Publications
 
 If you find DeepStrain or some part of the code useful, please cite as appropiate:
