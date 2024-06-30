@@ -13,6 +13,8 @@ Tensorflow implementation for cardiac segmentation, motion estimation, and strai
 
 **Note**: The current software works well with Tensorflow 2.3.1+.
 
+**UPDATE 2024**: The trained moel is now available through the Harvard Dataverse: https://doi.org/10.7910/DVN/XB6PEZ
+
 ## Evaluation
 
 <p align="center">
