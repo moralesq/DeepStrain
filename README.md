@@ -11,8 +11,8 @@
 
 :sparkles: **New Updates.**
 
-- :rocket: The trained weights were moved to the Harvard Dataverse: https://doi.org/10.7910/DVN/XB6PEZ. 
-- :rocket: The script for trained weights was updated for easy download: bash ./pretrained_models/download_model.sh
+- :rocket: Trained weights moved to Harvard Dataverse: https://doi.org/10.7910/DVN/XB6PEZ. 
+- :rocket: Download script updated for easy access: bash ./pretrained_models/download_model.sh
 
 Tensorflow implementation for cardiac segmentation, motion estimation, and strain analysis from balanced steady-state free-precession (bSSFP) cine MRI images.
 
