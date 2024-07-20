@@ -13,7 +13,6 @@ MODEL_DIR="./pretrained_models"
 filename1="carmen_Jan2021.h5"
 filename2="carson_Jan2021.h5"
 
-
 # Create the directory if it doesn't exist
 mkdir -p "$MODEL_DIR"
 

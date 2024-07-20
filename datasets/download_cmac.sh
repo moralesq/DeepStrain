@@ -1,4 +1,20 @@
 #!/bin/bash
+# This script downloads the CMAC dataset from the Harvard Dataverse.
+# Usage:
+#   ./download_cmac_dataset.sh                  # Downloads the entire CMAC dataset
+#   ./download_cmac_dataset.sh gt results -1    # Downloads GT, results, and all subjects
+#   ./download_cmac_dataset.sh gt               # Downloads only the ground truth (GT) data
+#   ./download_cmac_dataset.sh results          # Downloads only the results data
+#   ./download_cmac_dataset.sh gt v1            # Downloads only the ground truth (GT) data and subject volunteer v1
+#   ./download_cmac_dataset.sh results v1       # Downloads only the results data and subject volunteer v1
+#   ./download_cmac_dataset.sh gt results v1    # Downloads GT, results, and subject volunteer v1
+#
+# Parameters:
+#   gt        - Download ground truth data
+#   results   - Download results data
+#   v1, v2, etc. - Download specific subject volunteer
+#   -1        - Download all subject volunteers
+
 echo "Downloading CMAC dataset from the Harvard Dataverse: https://doi.org/10.7910/DVN/XB6PEZ"
 
 # Define the URLs of the ground-truth and results files to download
@@ -20,6 +36,10 @@ urls=(
     "https://dataverse.harvard.edu/api/access/datafile/10395527"
     "https://dataverse.harvard.edu/api/access/datafile/10395528"
     "https://dataverse.harvard.edu/api/access/datafile/10395529"
+    "https://dataverse.harvard.edu/api/access/datafile/10395555"
+    "https://dataverse.harvard.edu/api/access/datafile/10395558"
+    "https://dataverse.harvard.edu/api/access/datafile/10395560"
+    "https://dataverse.harvard.edu/api/access/datafile/10395561"
 )
 
 # Define the directory to save the files
@@ -75,7 +95,7 @@ process_arguments() {
   local download_gt=false
   local download_results=false
   local download_subjects=false
-  local subject_version=-1
+  local subject_volunteer=-1
 
   for arg in "$@"; do
     case $arg in
@@ -86,11 +106,11 @@ process_arguments() {
         download_results=true
         ;;
       v*)
-        subject_version=${arg:1}
+        subject_volunteer=${arg:1}
         download_subjects=true
         ;;
       -1)
-        subject_version=-1
+        subject_volunteer=-1
         download_subjects=true
         ;;
     esac
@@ -108,32 +128,36 @@ process_arguments() {
     unzip_and_cleanup "CMAC_GT.zip" "$MODEL_DIR"
   fi
 
-  
-
   # Download subjects if requested
   if $download_subjects; then
-    if [ "$subject_version" == "-1" ]; then
+    if [ "$subject_volunteer" == "-1" ]; then
       for i in "${!urls[@]}"; do
-        download_and_unzip_version "$i"
+        download_and_unzip_volunteer "$i"
       done
     else
-      if (( subject_version >= 1 && subject_version <= ${#urls[@]} )); then
-        download_and_unzip_version "$((subject_version - 1))"
+      if (( subject_volunteer >= 1 && subject_volunteer <= ${#urls[@]} )); then
+        download_and_unzip_volunteer "$((subject_volunteer - 1))"
       else
-        echo "Invalid subject version: v$subject_version"
+        echo "Invalid subject volunteer: v$subject_volunteer"
         exit 1
       fi
     fi
   fi
 }
 
-# Function to download and unzip a specific version
-download_and_unzip_version() {
-  local version_index=$1
-  local url=${urls[$version_index]}
-  local filename="CMAC_raw_v$((version_index + 1)).zip"
-  download_file "$url" "$filename" "$RAW_DIR"
-  unzip_and_cleanup "$filename" "$RAW_DIR"
+# Function to download and unzip a specific volunteer
+download_and_unzip_volunteer() {
+  local volunteer_index=$1
+  local url=${urls[$volunteer_index]}
+  local filename="CMAC_raw_v$((volunteer_index + 1)).zip"
+  # Check if the URL is not empty
+  if [ -n "$url" ]; then
+    download_file "$url" "$filename" "$RAW_DIR"
+    unzip_and_cleanup "$filename" "$RAW_DIR"
+  else
+    echo "Skipping download for volunteer v$((volunteer_index + 1)) because this was not provided in the dataset."
+  fi
+
 }
 
 # Main script execution
