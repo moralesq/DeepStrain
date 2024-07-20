@@ -12,7 +12,8 @@
 :sparkles: **New Updates.**
 
 - :rocket: Trained weights moved to Harvard Dataverse: https://doi.org/10.7910/DVN/XB6PEZ. 
-- :rocket: Download script updated for easy access: bash ./pretrained_models/download_model.sh
+- :rocket: Weights script updated for easy download: bash ./pretrained_models/download_model.sh
+- :rocket: :rocket:  Cardiac Motion Analysis Challenge (CMAC) uploaded to Dataverse :rocket: :rocket: 
 
 Tensorflow implementation for cardiac segmentation, motion estimation, and strain analysis from balanced steady-state free-precession (bSSFP) cine MRI images.
 
