@@ -9,6 +9,11 @@
 
 **DeepStrain: A Deep Learning Workflow for the Automated Characterization of Cardiac Mechanics.**  
 
+:sparkles: **New Updates.**
+
+- :rocket: The trained weights were moved to the Harvard Dataverse: https://doi.org/10.7910/DVN/XB6PEZ. 
+- :rocket: The script for trained weights was updated for easy download: bash ./pretrained_models/download_model.sh
+
 Tensorflow implementation for cardiac segmentation, motion estimation, and strain analysis from balanced steady-state free-precession (bSSFP) cine MRI images.
 
 **Note**: The current software works well with Tensorflow 2.3.1+.
